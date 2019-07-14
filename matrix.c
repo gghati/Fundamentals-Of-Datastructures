@@ -1,12 +1,9 @@
-/* 
+/*
 =====================================================================
-
 Assignment : Matrix Operations
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
-Description : Assingment 2 in C
-
 ====================================================================
 */
 
@@ -20,75 +17,72 @@ void transpose(int [10][10], int, int);
 void mul(int[10][10], int[10][10], int, int, int, int);
 void displayMenu();
 
-
 int i, j, k;
 
 int main(){
-   
+
    int r1, r2, c1, c2;
    int a[10][10] , b[10][10];
 
    printf("Enter number of rows and columns for 1st matrix :");
    scanf("%d%d", &r1, &c1);
-    
+
    printf("Enter Elements of 1st matrix : ");
    for(i=0; i<r1 ; i++){
       for(j=0; j<c1; j++){
           scanf("%d", &a[i][j]);
-      }     
+      }
    }
-    
+
    printf("Enter number of rows and columns for 2nd matrix :");
    scanf("%d%d", &r2, &c2);
-   
+
    printf("Enter Elements of 2nd matrix : ");
    for(i=0; i<r2 ; i++){
       for(j=0; j<c2; j++){
           scanf("%d", &b[i][j]);
-      }     
-   }    
-   
-   int choice = 0;   
-   int enter = 1;
+      }
+   }
+
+   int choice = 0;
    displayMenu();
-   
-   while(enter==1){
-       scanf("%d", &choice);
+
+   do{
+     printf("ENTER CHOICE (8 For Display Menu) : ");
+     scanf("%d", &choice);
        switch(choice) {
            case 1 : printf("Addition of A and B\n");
                     add(a,b,r1,c1,r2,c2);
                     break;
-           
+
            case 2: printf("Subtraction of A and B :\n");
                    diff(a,b,r1,c1,r2,c2);
                    break;
-                   
+
            case 3: printf("Transpose of A is :\n");
                    transpose(a,r1,c1);
                    break;
-           
+
            case 4: printf("For  A :\n");
                    suddelPoint(a,r1,r2);
                    break;
-                   
+
            case 5: printf("Transpose of B is :\n");
                    transpose(b,r2,c2);
                    break;
-           
+
            case 6: printf("For B  :\n");
                    suddelPoint(b,r2,c2);
-                   break;  
-                   
+                   break;
+
            case 7: printf("Multiplication of A and B\n");
                    mul(a,b,r1,c1,r2,c2);
-                   break;         
-           
+                   break;
+
            case 8: displayMenu();
-                   break;                                  
-                              
-           case 9: enter=0;
+                   break;
        }
-   }
+   }while (choice!=9);
 }
 
 void displayMenu(){
@@ -108,7 +102,7 @@ void printMatrix(int a[10][10], int r1, int c1){
   for(i=0; i<r1 ; i++){
       for(j=0; j<c1; j++){
          printf("%d ", a[i][j]);
-      }     
+      }
       printf("\n");
   }
 }
@@ -121,10 +115,10 @@ void add(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
   int c[10][10];
   for(int i=0; i<r1 ; i++){
      for(int j=0; j<c1; j++){
-        c[i][j] = a[i][j] + b[i][j];    
-     }     
+        c[i][j] = a[i][j] + b[i][j];
+     }
   }
-  printMatrix(c, r1, c1);  
+  printMatrix(c, r1, c1);
 }
 
 void diff(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
@@ -136,8 +130,8 @@ void diff(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
   for(i=0; i<r1 ; i++){
      for(j=0; j<c1; j++){
         c[i][j] = a[i][j] - b[i][j];
-     }     
-  }  
+     }
+  }
   printMatrix(c, r1, c1);
 }
 
@@ -184,18 +178,18 @@ int maxCol(int a[10][10], int r1, int c1, int col){
 void suddelPoint(int a[10][10], int r1, int c1){
   int rowMin[r1], colMin;
   int point = 0;
-   
+
    for(i=0; i<r1; i++){
       for(j=0; j<c1; j++){
         if( (minRow(a,r1,c1,i) == maxCol(a,r1,c1,j)) || (maxRow(a,r1,c1,i) == minCol(a,r1,c1,j))){
           point++;
-          printf("Saddle point is at (%d, %d) and is %d\n",i , j, a[i][j]); 
-        }        
+          printf("Saddle point is at (%d, %d) and is %d\n",i , j, a[i][j]);
+        }
       }
    }
-   
+
    if(point==0)
-      printf("There is no suddel point.\n");     
+      printf("There is no suddel point.\n");
 }
 
 void transpose(int a[10][10], int r1, int c1){
@@ -209,7 +203,7 @@ void transpose(int a[10][10], int r1, int c1){
 
 void mul(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
    int c[10][10];
-   
+
    if(c1!=r2){
       printf("\nThe col of first matrix is not equal to row of second matrix\n");
    } else {
@@ -220,7 +214,7 @@ void mul(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
                 c[i][j] += a[i][k] * b[k][j];
              }
           }
-       }  
-       printMatrix(c, r1, c2); 
+       }
+       printMatrix(c, r1, c2);
   }
 }
