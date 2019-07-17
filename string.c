@@ -111,7 +111,7 @@ void palindrom(char a[]){
      printf("The String is not Palindrom!\n");
 }
 
-void substring(char a[50], char b[50]){        // b is substring of a
+void substring(char a[50], char b[50]){        // b is substring of  a
 
   int al = length(a);
   int bl = length(b);
