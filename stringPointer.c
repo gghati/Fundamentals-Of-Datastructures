@@ -43,7 +43,7 @@ int main(){
       case 2:
           printf("Enter second String: ");
           scanf("%s", ptr2);
-          copy(ptr2,ptr2);
+          copy(ptr,ptr2);
           break;
       
       case 3:        
@@ -177,8 +177,8 @@ void copy(char *ptr, char *ptr2){
     *(ptr3+i) = *(ptr+i);       
   }  
   
-  for(i=al; i<bl+al; i++){
-    *(ptr3+i) = *(ptr2+i-al);
+  for(i=0; i<bl; i++){
+    *(ptr3+i+al) = *(ptr2+i);
   }
   printf("The Copied String is: ");
   for(i=0;i<bl+al;i++){
