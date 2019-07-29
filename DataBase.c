@@ -7,6 +7,12 @@ Batch : F 10
 =====================================================================
 */
 
+
+// 3 marks
+// avg and percentage
+//validation
+//formating
+  
 int i=0;
 const int BASEROLL = 23201; 
 
@@ -96,10 +102,10 @@ void displayMenu(){   //Done
 
 void display(struct Student students[50], int num){       //Done
    printf("\n<----------------------------------STUDENT DATABASE------------------------------------->");
-   printf("\nRollNo.\tName\tCity\tMob Number\tMarks 1\tMarks 2");
+   printf("\nRollNo.\t\tName\t\tCity\t\tMob Number\tMarks 1\t\tMarks 2");
    printf("\n---------------------------------------------------------------------------------------------");
    for(i=0; i<num; i++){
-     printf("\n%d\t%s\t%s\t%d\t%d\t%d",students[i].stuRoll, students[i].name, students[i].city, students[i].mobNo, students[i].marks[0],students[i].marks[0]);
+     printf("\n%d\t\t%s\t\t%s\t\t%d\t\t%d\t\t%d",students[i].stuRoll, students[i].name, students[i].city, students[i].mobNo, students[i].marks[0],students[i].marks[0]);
    }  
    printf("\n---------------------------------------------------------------------------------------------");   
 }
