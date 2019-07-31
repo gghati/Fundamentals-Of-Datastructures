@@ -7,30 +7,28 @@ Batch : F 10
 =====================================================================
 */
 
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 
-// 3 marks
-// avg and percentage
-//validation
-//formating
-  
 int i=0;
-const int BASEROLL = 23201; 
+const int BASEROLL = 23201;
 
 struct Student{
    int stuRoll;
    char name[20];
-   int marks[2];
+   int marks[3];
    char city[20];
-   int mobNo;
+   char mobNo[10];
 };
 
-//void add(struct Student students[50], int num);      //num = total number of students  
-//void display(struct Student students[50], int num);
-//void modify(struct Student students[50], int roll);  //roll = index of the array
-//void delete(struct Student students[50], int num, int roll);
-//void search(struct Student students[50], int roll);
-//void displayMenu();
-
+int add(struct Student students[50], int num);      //num = total number of students
+void display(struct Student students[50], int num);
+void modify(struct Student students[50], int roll);  //roll = index of the array
+void delete(struct Student students[50], int num, int roll);
+void search(struct Student students[50], int roll);
+void displayMenu();
+int avg(int arr[3]);
 
 int main(){
    struct Student stu[50];
@@ -38,57 +36,64 @@ int main(){
    int exit = 0;
    int roll = 0;
    int ch;
-   
+
    do{
      displayMenu();
      printf("\nENTER CHOICE:");
      scanf("%d", &ch);
-     
+
      switch(ch){
        case 1:
-           add(stu, num);     
-           num++;
+           if(add(stu, num)==0){
+             num++;
+             printf("Student Added!");
+           }else{
+             printf("Enter the Mobile Field Correctly!");
+             delete(stu, num+1, stu[num].stuRoll);
+           }
            break;
-           
+
        case 2:
            printf("Which Roll No you want to modify:");
            scanf("%d", &roll);
            modify(stu, roll);
            break;
-           
+
        case 3:
-           printf("Which field you want to modify:");
+           printf("Enter Roll Number which you want to delete:");
            scanf("%d", &roll);
            delete(stu, num, roll);
            num--;
            break;
-           
+
        case 4:
            display(stu, num);
            break;
-       
+
        case 5:
-          exit = 1;            
-     }    
+          exit = 1;
+     }
    }while(exit!=1);
-   
+
    return 0;
 }
 
 void delete(struct Student students[50], int num, int roll){   //DONE
    for(int i=0; i<num-1; i++){
-      if(roll>=(BASEROLL+i)){
+      if((BASEROLL+i)>=roll){
          for(int j=0; j<20; j++){
             students[i].name[j] = students[i+1].name[j];
             students[i].city[j] = students[i+1].city[j];
-            if(j<2){
+            if(j<3){
               students[i].marks[j] = students[i+1].marks[j];
+            }if(j<10){
+              students[i].mobNo[j] = students[i+1].mobNo[j];
             }
          }
-         students[i].mobNo;
       }
    }
    students[num-1].stuRoll = 0;
+   printf("\nDeleted Student!");
 }
 
 void displayMenu(){   //Done
@@ -101,19 +106,26 @@ void displayMenu(){   //Done
 }
 
 void display(struct Student students[50], int num){       //Done
-   printf("\n<----------------------------------STUDENT DATABASE------------------------------------->");
-   printf("\nRollNo.\t\tName\t\tCity\t\tMob Number\tMarks 1\t\tMarks 2");
-   printf("\n---------------------------------------------------------------------------------------------");
+   printf("\n<----------------------------------------------------------STUDENT DATABASE------------------------------------------------------------>");
+   printf("\nRollNo.\t\tName\t\tCity\t\tMob Number\tMarks 1\t\tMarks 2\t\tMarks 3\t\tPercentage");
+   printf("\n------------------------------------------------------------------------------------------------------------------------------------------");
    for(i=0; i<num; i++){
-     printf("\n%d\t\t%s\t\t%s\t\t%d\t\t%d\t\t%d",students[i].stuRoll, students[i].name, students[i].city, students[i].mobNo, students[i].marks[0],students[i].marks[0]);
-   }  
-   printf("\n---------------------------------------------------------------------------------------------");   
+     int total = 0;
+     total = avg(students[i].marks);
+     printf("\n%d\t\t%s\t\t%s\t\t%s\t\t%d\t\t%d\t\t%d\t\t%d",students[i].stuRoll, students[i].name, students[i].city,
+                    students[i].mobNo, students[i].marks[0],students[i].marks[1], students[i].marks[2], (total/3));
+   }
+   printf("\n-----------------------------------------------------------------------------------------------------------------------------------------");
+}
+
+int avg(int arr[3]){
+   return arr[0] + arr[1] + arr[2];
 }
 
 void search(struct Student students[50], int roll){   //Done
-    i = roll-BASEROLL;   
+    i = roll-BASEROLL;
     printf("\nDetails of Student:");
-    printf("\n%d\t%s\t%s\t%d\t%d\t%d",students[i].stuRoll, students[i].name, students[i].city, students[i].mobNo, students[i].marks[0],students[i].marks[0]);
+    printf("\n%d\t%s\t%s\t%s\t%d\t%d\t%d",students[i].stuRoll, students[i].name, students[i].city, students[i].mobNo, students[i].marks[0], students[i].marks[1], students[i].marks[2]);
 }
 
 void modify(struct Student students[50], int roll){         //Done
@@ -121,36 +133,45 @@ void modify(struct Student students[50], int roll){         //Done
      int ch = 0;
      printf("what you wannna Update:\n1)Name\n2)City\n3)Mobile Number\n4)Marks");
      scanf("%d",&ch);
-     
+
      switch(ch){
        case 1: printf("\nUPDATE the Name of Student:");
                scanf("%s", students[i].name);
                break;
-               
+
        case 2: printf("\nUPDATE the City:");
                scanf("%s", students[i].city);
                break;
-               
+
        case 3: printf("\nUPDATE the Mobile NUmber:");
-               scanf("%d",&students[i].mobNo);
+               scanf("%s", students[i].mobNo);
                break;
-               
-       case 4: printf("\nUPDATE the Marks of students of previous year:");
-               scanf("%d %d",&students[i].marks[0], &students[i].marks[1]);  
+
+       case 4: printf("\nUPDATE the Marks of students of 3 Subjects:");
+               scanf("%d %d %d",&students[i].marks[0], &students[i].marks[1], &students[i].marks[2]);
                break;
-       default: printf("\nEnter Valid Choice...");               
+       default: printf("\nEnter Valid Choice...");
      }
+     printf("\nUpdation Done!");
 }
 
-
-void add(struct Student students[50], int num){     // num = total number of student present in database  //Done
+int add(struct Student students[50], int num){     // num = total number of student present in database  //Done
    students[num].stuRoll = BASEROLL + num;
    printf("\nEnter the Name of Student:");
    scanf("%s",students[num].name);
    printf("\nEnter the City:");
    scanf("%s",students[num].city);
    printf("\nEnter the Mobile NUmber:");
-   scanf("%d",&students[num].mobNo);
+   scanf("%s",students[num].mobNo);
+  if(strlen(students[num].mobNo) != 10){
+    return 1;
+  }
+   for (i=0; students[num].mobNo[i]!= '\0'; i++){
+       if(isdigit(students[num].mobNo[i] != 0)){
+          return 1;
+       }
+   }
    printf("\nEnter the Marks of students of previous year:");
-   scanf("%d %d",&students[num].marks[0], &students[num].marks[1]);  
-} 
+   scanf("%d %d %d",&students[num].marks[0], &students[num].marks[1], &students[num].marks[2]);
+   return 0;
+}
