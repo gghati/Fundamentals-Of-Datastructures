@@ -11,7 +11,6 @@ Batch : F 10
 
 #define MAX 30
 #include<stdio.h>
-#include<conio.h>
 
 void create(int set[]);
 void print(int set[]);
