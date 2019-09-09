@@ -89,8 +89,8 @@ void selectionSort(Stu st[], int no){
 			if(strcmp(st[min].name, st[j].name) < 0){
 				min = j;
 		    }
-			swap(&st[min], &st[i]);
 		}
+		swap(&st[min], &st[i]);
 	}
 }
 
