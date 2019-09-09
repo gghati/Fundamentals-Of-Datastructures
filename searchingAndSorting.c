@@ -21,9 +21,9 @@ d) Display the number of passes and comparisons for different test cases (Worst,
 #define true 1
 
 typedef struct Student{
-	int rollno;
+//	int rollno;
 	char name[50];
-	int percentage;
+//	int percentage;
 }Stu;
 
 void display(Stu st[], int noOfStu);
@@ -43,12 +43,12 @@ int main(void) {
 
 	for(i=0; i<noOfStu; i++){
 		printf("\nEnter Details of Student %d", i+1);
-		printf("\nRoll No: ");
-		scanf("%d", &st[i].rollno);
+//		printf("\nRoll No: ");
+//		scanf("%d", &st[i].rollno);
 		printf("\nName: ");
 		scanf("%s", st[i].name);
-		printf("\nPercentage: ");
-		scanf("%d", &st[i].percentage);
+//		printf("\nPercentage: ");
+//		scanf("%d", &st[i].percentage);
 	}
 
 	selectionSort(st, noOfStu);
@@ -58,12 +58,12 @@ int main(void) {
 }
 
 void display(Stu st[], int noOfStu){
-	printf("\n<---------------------Student Data--------------------->");
+	printf("\n<-------------Student Data---------------->");
 	printf("\nRollNo\tName\tPercentage");
 	for(i=0; i<noOfStu; i++){
-		printf("\n%d\t%s\t%d", st[i].rollno, st[i].name, st[i].percentage);
+		printf("\n%d\t%s\t%d", 0 /* st[i].rollno */, st[i].name,  0 /* st[i].percentage */);
 	}
-	printf("\n------------------------------------------------------");
+	printf("\n------------------------------------------");
 }
 
 void displayMenu(){
@@ -72,27 +72,24 @@ void displayMenu(){
 	printf("3) Display data for RollNo specified by user (Binary search)");
 }
 
-void bubbleSort(Stu st[], int no){
-	int sorted = false;
-	int last = no - 1;
-	for(int i=0; (i<last) && !sorted; i++){
-		sorted = true;
-		for(j=last; j>i; j--){
-			if(strcmp(st[j].name, st[j-1].name) < 0){
-				swap(&st[j], &st[j-1]);
-				sorted = false;
+void bubbleSort(Stu st[], int no){								//DONE
+	for(i=0;i<no; i++){
+		for(j=0; j<no-1; j++){
+			if(strcmp(st[j].name, st[j+1].name) > 0){
+				swap(&st[j], &st[j+1]);
 			}
 		}
 	}
 }
 
 void selectionSort(Stu st[], int no){
-	Stu *min = &st[0];
-	for(i=0; i<no; i++){
-		for(j=i+1; j<no-1; j++){
-			if(strcmp(min->name, st[j].name) < 0){
-				swap(min, &st[j]);
-			}
+	for(i=0; i<no-1; i++){
+		int min = i;
+		for(j=i+1; j<no; j++){
+			if(strcmp(st[min].name, st[j].name) < 0){
+				min = j;
+		    }
+			swap(&st[min], &st[i]);
 		}
 	}
 }
@@ -102,7 +99,7 @@ void binarySearch(Stu st[], int no){
 }
 
 void swap(Stu *s1, Stu *s2){
-    Stu *temp = NULL;
+    Stu *temp;
     *temp = *s1;
     *s1 = *s2;
     *s2 = *temp;
