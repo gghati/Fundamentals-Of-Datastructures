@@ -21,9 +21,9 @@ d) Display the number of passes and comparisons for different test cases (Worst,
 #define true 1
 
 typedef struct Student{
-//	int rollno;
+	int rollno;
 	char name[50];
-//	int percentage;
+	int percentage;
 }Stu;
 
 void display(Stu st[], int noOfStu);
@@ -43,17 +43,37 @@ int main(void) {
 
 	for(i=0; i<noOfStu; i++){
 		printf("\nEnter Details of Student %d", i+1);
-//		printf("\nRoll No: ");
-//		scanf("%d", &st[i].rollno);
+		printf("\nRoll No: ");
+		scanf("%d", &st[i].rollno);
 		printf("\nName: ");
 		scanf("%s", st[i].name);
-//		printf("\nPercentage: ");
-//		scanf("%d", &st[i].percentage);
+		printf("\nPercentage: ");
+		scanf("%d", &st[i].percentage);
 	}
 
-	selectionSort(st, noOfStu);
-	display(st, noOfStu);
+	int ch, exit;
+	exit = false;
+	char arr[20];
 
+	while(!exit){
+		displayMenu();
+		printf("\nEnter the choice: ");
+		scanf("%d", ch);
+
+		switch(ch){
+			case 1: bubbleSort(st, noOfStu);
+					 display(st, noOfStu);
+					 break;
+			case 2: selectionSort(st, noOfStu);
+					 display(st, noOfStu);
+					 break;
+			case 3:	printf("Enter the name to be Searched!");
+					scanf("%s", arr);
+				    binarySearch(st, arr, noOfStu);
+				    break;
+			case 4: exit = true;
+		}
+	}
 	return EXIT_SUCCESS;
 }
 
@@ -61,7 +81,7 @@ void display(Stu st[], int noOfStu){
 	printf("\n<-------------Student Data---------------->");
 	printf("\nRollNo\tName\tPercentage");
 	for(i=0; i<noOfStu; i++){
-		printf("\n%d\t%s\t%d", 0 /* st[i].rollno */, st[i].name,  0 /* st[i].percentage */);
+		printf("\n%d\t%s\t%d",st[i].rollno, st[i].name, st[i].percentage);
 	}
 	printf("\n------------------------------------------");
 }
@@ -70,6 +90,7 @@ void displayMenu(){
 	printf("1) Display the data in ascending order of name (Bubble Sort)");
 	printf("2) Display the data in descending order of name(Selection sort)");
 	printf("3) Display data for RollNo specified by user (Binary search)");
+	printf("4) Exit");
 }
 
 void bubbleSort(Stu st[], int no){								//DONE
@@ -82,7 +103,7 @@ void bubbleSort(Stu st[], int no){								//DONE
 	}
 }
 
-void selectionSort(Stu st[], int no){
+void selectionSort(Stu st[], int no){							//DONE
 	for(i=0; i<no-1; i++){
 		int min = i;
 		for(j=i+1; j<no; j++){
@@ -94,8 +115,24 @@ void selectionSort(Stu st[], int no){
 	}
 }
 
-void binarySearch(Stu st[], int no){
+int binarySearch(Stu st[], char arr[], int no){			// DONE
+	int left;
+	int right = no -1;
+	int middle;
+	while(left <= right){
+		middle = (left + right)/2;
+		switch(strcmp(st[middle].name, arr)){
+			case -1: left = middle + 1;
+			        break;
+			case 0: printf("Element Found");
+				    return middle;
+			        break;
+			case 1: right = right -1;
 
+		}
+	}
+	printf("Element not Found");
+	return -1;
 }
 
 void swap(Stu *s1, Stu *s2){
@@ -104,4 +141,5 @@ void swap(Stu *s1, Stu *s2){
     *s1 = *s2;
     *s2 = *temp;
 }
+
 
