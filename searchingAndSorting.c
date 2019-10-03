@@ -58,23 +58,21 @@ int main(void) {
 	while(!exit){
 		displayMenu();
 		printf("\nEnter the choice: ");
-		scanf("%d", ch);
+		scanf("%d", &ch);
 
 		switch(ch){
 			case 1: bubbleSort(st, noOfStu);
-					 display(st, noOfStu);
 					 break;
 			case 2: selectionSort(st, noOfStu);
-					 display(st, noOfStu);
 					 break;
 			case 3:	printf("Enter the name to be Searched!");
-					scanf("%s", arr);
+				    scanf("%s", arr);
 				    binarySearch(st, arr, noOfStu);
 				    break;
 			case 4: exit = true;
 		}
 	}
-	return EXIT_SUCCESS;
+	return 0;
 }
 
 void display(Stu st[], int noOfStu){
@@ -87,10 +85,10 @@ void display(Stu st[], int noOfStu){
 }
 
 void displayMenu(){
-	printf("1) Display the data in ascending order of name (Bubble Sort)");
-	printf("2) Display the data in descending order of name(Selection sort)");
-	printf("3) Display data for RollNo specified by user (Binary search)");
-	printf("4) Exit");
+	printf("\n1) Display the data in ascending order of name (Bubble Sort)");
+	printf("\n2) Display the data in descending order of name(Selection sort)");
+	printf("\n3) Display data for RollNo specified by user (Binary search)");
+	printf("\n4) Exit");
 }
 
 void bubbleSort(Stu st[], int no){								//DONE
@@ -101,6 +99,7 @@ void bubbleSort(Stu st[], int no){								//DONE
 			}
 		}
 	}
+	display(st, no);
 }
 
 void selectionSort(Stu st[], int no){							//DONE
@@ -113,6 +112,7 @@ void selectionSort(Stu st[], int no){							//DONE
 		}
 		swap(&st[min], &st[i]);
 	}
+	display(st, no);
 }
 
 int binarySearch(Stu st[], char arr[], int no){			// DONE
@@ -132,6 +132,7 @@ int binarySearch(Stu st[], char arr[], int no){			// DONE
 		}
 	}
 	printf("Element not Found");
+	display(st, no);
 	return -1;
 }
 
@@ -141,5 +142,4 @@ void swap(Stu *s1, Stu *s2){
     *s1 = *s2;
     *s2 = *temp;
 }
-
 

@@ -5,7 +5,8 @@ Assignment : String Operations ( Without pointers )
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
-Description : Assingment 2 in C
+
+Problem Statement:
 
 ====================================================================
 */
