@@ -4,6 +4,15 @@ Assignment : DataBase of Students
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
+
+Problem Statement: Create a Database using array of structures and perform
+following operations on it:
+	a) Create Database
+	b) Display Database
+	c) Add record
+	d) Search a record
+	e) Modify a record
+	f) Delete a record
 =====================================================================
 */
 

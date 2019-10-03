@@ -1,11 +1,16 @@
 /*
 ==========================================================================
-
 Name :  Set Operators
 Author : Gaurav Ghati
 Class : SE 10
 Batch : F 10
 
+Problem Statement:
+Perform following set operations using arrays –
+	a) Union
+	b) Intersection
+	c) Difference
+	d) Symmetric Difference
 ==========================================================================
 */
 

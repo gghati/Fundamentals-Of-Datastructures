@@ -7,6 +7,12 @@ class : SE 10
 Batch : F 10
 
 Problem Statement:
+Perform following String operations with and without pointers to arrays (without using the library functions):
+	a) substring
+	b) palindrome
+	c) compare
+	d) copy
+	e) Reverse.
 
 ====================================================================
 */

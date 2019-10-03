@@ -4,6 +4,13 @@ Assignment : Matrix Operations
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
+
+Problem Statement:
+Represent matrix using two dimensional arrays and perform following operations with and without pointer.
+	a) Addition
+	b) Multiplication
+	c) Transpose
+	d) Saddle point
 ====================================================================
 */
 
