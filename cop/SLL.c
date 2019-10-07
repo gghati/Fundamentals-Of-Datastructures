@@ -20,14 +20,12 @@ Create a singly linked list with options:
 #include <string.h>
 #define lim 50
 
-typedef struct
-{
+typedef struct{
 	int data;
 	struct Node *next;
 }Node;
 
-Node* create(int t)
-{
+Node* create(int t){							// DONE
 	Node *p, *hd = NULL;
 	int i,val;
 	printf("\nEnter %d Values one by one.\n",t);
@@ -35,11 +33,10 @@ Node* create(int t)
 	scanf("%d", &val);
 	p->data = val;
 	p->next = NULL;
-
+	
 	hd = p;
-
-	for(i=0;i<t-1;i++)
-	{
+	
+	for(i=0;i<t-1;i++){
 		p->next = (Node*)malloc(sizeof(Node));
 		p = p->next;
 		scanf("%d", &val);
@@ -49,8 +46,7 @@ Node* create(int t)
 	return hd;
 }
 
-Node* insertNode(Node *head1, int t)
-{
+Node* insertNode(Node *head1, int t){					// DONE
 	Node *temp, *head;
 	int cnt = 1, pos = 0, val;
 
@@ -65,33 +61,26 @@ Node* insertNode(Node *head1, int t)
 
 	printf("\nPositions start from 1 to %d. Type 0 to insert at the end.", t);
 
-	do
-	{
-		if(pos<0 || pos>t)
-		{
+	do{
+		if(pos<0 || pos>t){
 			printf("\nEnter CORRECT Value..!!");
 		}
 
 		printf("\nEnter position where you wish to insert the value : ");
 		scanf("%d", &pos);
 
-		if(pos == 0)
-		{
-			while(head->next!=NULL)
-			{
+		if(pos == 0){
+			while(head->next!=NULL){
 				head = head->next;
 			}
 			head->next = temp;
 		}
-		else if(pos == 1)
-		{
+		else if(pos == 1){
 			temp->next = head;
 			head1 = temp;
 		}
-		else
-		{
-			while(cnt != pos-1 && pos <= t)
-			{
+		else{
+			while(cnt != pos-1 && pos <= t){
 				head = head->next;
 				cnt++;
 			}
@@ -103,18 +92,15 @@ Node* insertNode(Node *head1, int t)
 	return head1;
 }
 
-void display(Node *h, int t)
-{
+void display(Node *h, int t){
 	Node *temp = h;
-	while(temp != NULL)
-	{
-		printf(" %d  ",temp->data);
+	while(temp != NULL){
+		printf("(%d | %d) ->  ",temp->data, &temp->next);
 		temp = temp->next;
 	}
 }
 
-Node* deleteNode(Node *head1, int t)
-{
+Node* deleteNode(Node *head1, int t){
 	Node *head, *p;
 	int pos = 1, cnt = 1;
 
@@ -122,25 +108,20 @@ Node* deleteNode(Node *head1, int t)
 
 	printf("\nPositions start from 1 to %d.", t);
 
-	do
-	{
-		if(pos<1 || pos>t)
-		{
+	do{
+		if(pos<1 || pos>t){
 			printf("\nEnter CORRECT Value..!!");
 		}
 
 		printf("\nEnter position of element you wish to delete : ");
 		scanf("%d", &pos);
 
-		if(pos == 1)
-		{
+		if(pos == 1){
 			head1 = head1->next;
 			free(head);
 		}
-		else
-		{
-			while(cnt != pos-1)
-			{
+		else{
+			while(cnt != pos-1){
 				head = head->next;
 				cnt++;
 			}
@@ -153,26 +134,22 @@ Node* deleteNode(Node *head1, int t)
 	return head1;
 }
 
-void reverseDisplay(Node *h, int t)
-{
+void reverseDisplay(Node *h, int t){
 	int i, n = 0, a[20];
 	Node *temp = h;
-	while(temp != NULL)
-	{
+	while(temp != NULL){
 		a[n] = temp->data;
 		temp = temp->next;
 		n++;
 	}
 	for(i = n-1; i>=0; i--)
-		printf(" %d  ", a[i]);
+		printf(" %d -> ", a[i]);
 }
 
-Node* revertNode(Node *head1, int t)
-{
+Node* revertNode(Node *head1, int t){
 	Node *prev = NULL, *current = head1, *next;
 
-	while(current!=NULL)
-	{
+	while(current!=NULL){
 		next = current->next;
 		current->next = prev;
 		prev = current;
@@ -181,31 +158,27 @@ Node* revertNode(Node *head1, int t)
 	return prev;
 }
 
-int main() {
+int main(){
 	int ch,t=0;
 	Node *head = NULL;
 
-	do
-	{
+	do{
 		printf("\nMenu :\n1. Create.\n2. Insert.\n3. Display.\n4. Delete.\n5. Display Reverse.\n6. Revert the SSL.\n7. Exit.\nEnter your choice : ");
 		scanf("%d",&ch);
-		switch(ch)
-		{
-			case 1:	do
-					{
-						printf("\nEnter no. of values : ");
-						scanf("%d",&t);
+		switch(ch){
+			case 1:	do{
+					printf("\nEnter no. of number of nodes you want to create : ");
+					scanf("%d",&t);
 
-						if(t>=lim)
-							printf("\nMaximum no. of value entries allowed is %d ...!!\n",lim);
-						if(t<0)
-							printf("\nEnter a VALID number...!!\n");
-					}while((t>=lim)||(t<0));
-					head = create(t);
-					break;
+					if(t>=lim)
+						printf("\nMaximum no. of value entries allowed is %d ...!!\n",lim);
+					if(t<0)
+						printf("\nEnter a VALID number...!!\n");
+				}while((t>=lim)||(t<0));
+				head = create(t);
+				break;
 
-			case 2:	if(t!=0)
-					{
+			case 2:	if(t!=0){
 						head = insertNode(head,t);
 						printf("Node INSERTED Successfully..!!\n");
 						t += 1;
