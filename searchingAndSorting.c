@@ -33,6 +33,7 @@ void displayMenu();
 void bubbleSort(Stu st[], int noOfStu);
 void selectionSort(Stu st[], int noOfStu);
 void swap(Stu *s1, Stu *s2);
+int binarySearch(Stu st[], char arr[], int no);
 
 int i, j;
 
