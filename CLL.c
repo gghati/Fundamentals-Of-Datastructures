@@ -14,9 +14,23 @@ Implement polynomial using CLL and perform
 =====================================================================
 */
 
+#include<stdio.h>
+
 typedef struct {
 	int data;
-	struct NODE *next;
-}NODE;
+	struct Node *next;
+}Node;
 
-void insert(NODE )
+Node* getNode(){
+	Node* new = (Node*) malloc(sizeof(Node));
+	new -> next = NULL;
+	return new;
+}
+
+Node* create(Node ){
+	
+}
+
+
+
+

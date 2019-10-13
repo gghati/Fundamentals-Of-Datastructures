@@ -15,10 +15,17 @@ with each node contains, as a data one character from the string and perform:
 =====================================================================
 */
 
+#include<stdio.h>
+#include<stdlib.h>
+
 typedef struct {
 	int data;
-	struct NODE *next;
-	struct NODE *prev;
-}NODE;
+	struct Node *next;
+	struct Node *prev;
+}Node;
 
-void insert(NODE )
+Node create(int n){
+	
+}
+
+

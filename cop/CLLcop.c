@@ -301,7 +301,7 @@ node* getPoly(node *head, int x, int *num) {
 	}
 
 	for (int i = 0; i < *num; i++) {
-		printf("\n\Term %d: \n", i + 1);
+		printf("\nTerm %d: \n", i + 1);
 		printf("Enter the Coefficient: ");
 		scanf("%d", &coeff);
 

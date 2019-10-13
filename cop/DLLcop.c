@@ -6,10 +6,12 @@ typedef struct{
 	struct node *prev;
 	struct node *next;
 }node; 
+
 int get_node(node *head){
 	head = (node *)malloc(sizeof(node));
 	return head;
 }
+
 int create(node *head, node *last, int n){
 	int i;
 	node *nev;

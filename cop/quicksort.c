@@ -125,7 +125,7 @@ int partitionR(int low, int high, int s[2])
 
     s[0] += comp;
     s[1] += swaps;
-
+    
     return (i+1);
 }
 
