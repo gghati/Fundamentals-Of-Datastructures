@@ -172,12 +172,12 @@ int main(){
 
 					if(t>=lim)
 						printf("\nMaximum no. of value entries allowed is %d ...!!\n",lim);
+
 					if(t<0)
 						printf("\nEnter a VALID number...!!\n");
 				}while((t>=lim)||(t<0));
 				head = create(t);
 				break;
-
 			case 2:	if(t!=0){
 						head = insertNode(head,t);
 						printf("Node INSERTED Successfully..!!\n");
