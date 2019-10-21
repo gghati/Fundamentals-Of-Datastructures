@@ -184,3 +184,13 @@ int add(struct Student students[50], int num){     // num = total number of stud
    scanf("%d %d %d",&students[num].marks[0], &students[num].marks[1], &students[num].marks[2]);
    return 0;
 }
+
+
+
+
+
+
+
+
+
+
