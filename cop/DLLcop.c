@@ -35,6 +35,7 @@ int create(node *head, node *last, int n){
 	last->next = NULL;
 	return head;
 }
+
 void display(node *head){
 	node *temp;
 	temp = head;
