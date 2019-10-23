@@ -46,9 +46,9 @@ node* create(node *head)
 	for(i=1;i<n;i++)
 	{
 		p->next=(node*)malloc(sizeof(node));
-		printf("\nEnter power for node %d\n",1);
+		printf("\nEnter power for node %d\n",i+1);
 		scanf("%d",&pow);
-		printf("\nEnter coefficient for node %d\n",1);
+		printf("\nEnter coefficient for node %d\n",i+1);
 		scanf("%d",&coeff);
 		p->next->coeff=coeff;
 		p->next->pow=pow;
@@ -56,23 +56,19 @@ node* create(node *head)
 	}
 	p->next=head;
 	return head;
-
 }
 
-void display(node *head)
-{
+void display(node *head){
 	node*p=NULL;
 	p=head;
-	do
-	{
+	do{
 		printf("%dx^%d",p->coeff,p->pow);
 		p=p->next;
 		printf("+");
 	}while(p!=head);
 }
 
-node* add(node *head1, node *head2, node *result)
-{
+node* add(node *head1, node *head2, node *result){
 	int x=0,y=0;
 	node *poly1,*poly2,*poly3=NULL;
 	poly1=head1;
@@ -83,10 +79,8 @@ node* add(node *head1, node *head2, node *result)
 	printf("\n");
 	if(poly1->next!=poly1&&poly2->next!=poly2)
 	{
-		do
-		{
-			if(poly1->pow==poly2->pow)
-			{
+		do{
+			if(poly1->pow==poly2->pow){
 				poly3->pow=poly1->pow;
 				poly3->coeff=poly1->coeff+poly2->coeff;
 				poly1=poly1->next;
@@ -94,15 +88,13 @@ node* add(node *head1, node *head2, node *result)
 				x++;
 				y++;
 			}
-			else if(poly1->pow>poly2->pow)
-			{
+			else if(poly1->pow>poly2->pow){
 				poly3->pow=poly1->pow;
 				poly3->coeff=poly1->coeff;
 				poly1=poly1->next;
 				x++;
 			}
-			else if(poly1->pow<poly2->pow)
-			{
+			else if(poly1->pow<poly2->pow){
 				poly3->pow=poly2->pow;
 				poly3->coeff=poly2->coeff;
 				poly2=poly2->next;
@@ -119,15 +111,11 @@ node* add(node *head1, node *head2, node *result)
 				poly3->pow=poly1->pow;
 				poly3->coeff=poly1->coeff;
 				poly1=poly1->next;
-			}
-			if(poly2!=head2)
-			{
+			} if(poly2!=head2) {
 				poly3->pow=poly2->pow;
 				poly3->coeff=poly2->coeff;
 				poly2=poly2->next;
-			}
-			if(poly1!=head1||poly2!=head2)
-			{
+			} if(poly1!=head1||poly2!=head2) {
 				poly3->next=(node*)malloc(sizeof(node));
 				poly3=poly3->next;
 				poly3->next=NULL;
@@ -231,14 +219,16 @@ float eval(node *head)
 	p=head;
 	do
 	{
-		y=pow(x,p->pow);
+		// y=pow(x,p->pow);
+		int num = p->pow;
+		while(num--){
+			y = y * (p->pow);
+		}
 		sum=sum+((p->coeff)*(y));
 		p=p->next;
 	}while(p!=head);	
 	return sum;
 }
-	
-	
 
 int main()
 {

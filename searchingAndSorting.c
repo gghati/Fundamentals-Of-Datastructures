@@ -88,6 +88,7 @@ void display(Stu st[], int noOfStu){
 }
 
 void displayMenu(){
+	printf("\n<----------------- Menu ------------------>");
 	printf("\n1) Display the data in ascending order of name (Bubble Sort)");
 	printf("\n2) Display the data in descending order of name(Selection sort)");
 	printf("\n3) Display data for RollNo specified by user (Binary search)");

@@ -83,7 +83,6 @@ int main(){
           exit = 1;
      }
    }while(exit!=1);
-
    return 0;
 }
 
@@ -117,14 +116,14 @@ void displayMenu(){   //Done
 void display(struct Student students[50], int num){       //Done
    printf("\n<----------------------------------------------------------STUDENT DATABASE------------------------------------------------------------>");
    printf("\nRollNo.\t\tName\t\tCity\t\tMob Number\tMarks 1\t\tMarks 2\t\tMarks 3\t\tPercentage");
-   printf("\n------------------------------------------------------------------------------------------------------------------------------------------");
+ printf("\n------------------------------------------------------------------------------------------------------------------------------------------");
    for(i=0; i<num; i++){
      int total = 0;
      total = avg(students[i].marks);
      printf("\n%d\t\t%s\t\t%s\t\t%s\t\t%d\t\t%d\t\t%d\t\t%d",students[i].stuRoll, students[i].name, students[i].city,
                     students[i].mobNo, students[i].marks[0],students[i].marks[1], students[i].marks[2], (total/3));
    }
-   printf("\n-----------------------------------------------------------------------------------------------------------------------------------------");
+   		printf("\n-------------------------------------------------------------------------- ---------------------------------------------------------------");
 }
 
 int avg(int arr[3]){
@@ -184,13 +183,5 @@ int add(struct Student students[50], int num){     // num = total number of stud
    scanf("%d %d %d",&students[num].marks[0], &students[num].marks[1], &students[num].marks[2]);
    return 0;
 }
-
-
-
-
-
-
-
-
 
 
