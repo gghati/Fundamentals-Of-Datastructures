@@ -1,3 +1,19 @@
+/*
+=====================================================================
+Assignment : Sorting & Searching operations
+Name : Gaurav Ghati
+class : SE 10
+Batch : F 10
+
+Problem Statement:
+Accept student information (e.g. RollNo, Name, Percentage etc.)
+a) Display the data in ascending order of name (Bubble Sort)
+b) Display the data in descending order of name(Selection sort)
+c) Display data for RollNo specified by user (Binary search)
+d) Display the number of passes and comparisons for different test cases (Worst, Average, Best case).
+====================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -114,6 +130,7 @@ void bubbleSort(int n)
 	printf("\nHence List is Sorted in %d passes.\nTotal Swaps = %d.\nTotal Comparisons = %d.\n", h-1, swapSum, compSum+n-1);
 }
 
+
 void selectionSort(int n)
 {
 	int i,j,max,k,h=1,g,t, swapSum = 0, compSum = 0;
@@ -207,7 +224,6 @@ int main()
 						{
 							printf("\nBUBBLE SORT : (Sort by Roll No. in Ascending Order)\n");
 							bubbleSort(t);
-
 							printf("\nDATA BASE :\n");
 							tabHead();
 							for(i=0;i<t;i++)

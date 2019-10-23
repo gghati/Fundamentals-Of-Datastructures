@@ -14,8 +14,6 @@ d) Display the number of passes and comparisons for different test cases (Worst,
 ====================================================================
 */
 
-// NOT COMPLETED YET MODIFICATIONS NEEDED
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -79,7 +77,7 @@ int main(void) {
 }
 
 void display(Stu st[], int noOfStu){
-	printf("\n<-------------Student Data---------------->");
+	printf("\n<------------- Student Data ---------------->");
 	printf("\nRollNo\tName\tPercentage");
 	for(i=0; i<noOfStu; i++){
 		printf("\n%d\t%s\t%d",st[i].rollno, st[i].name, st[i].percentage);
@@ -97,9 +95,9 @@ void displayMenu(){
 
 void bubbleSort(Stu st[], int no){								//DONE
 	for(i=0;i<no; i++){
-		for(j=0; j<no-1; j++){
-			if(strcmp(st[j].name, st[j+1].name) > 0){
-				swap(&st[j], &st[j+1]);
+		for(j=no-1; j>i; j--){
+			if(st[j-1].rollno > st[j].rollno){
+				swap(&st[j-1], &st[j]);
 			}
 		}
 	}
@@ -108,13 +106,12 @@ void bubbleSort(Stu st[], int no){								//DONE
 
 void selectionSort(Stu st[], int no){							//DONE
 	for(i=0; i<no-1; i++){
-		int min = i;
+		int max = i;
 		for(j=i+1; j<no; j++){
-			if(strcmp(st[min].name, st[j].name) < 0){
-				min = j;
-		    }
+			if(st[max].rollno < st[j].rollno)
+				max = j;
 		}
-		swap(&st[min], &st[i]);
+		swap(&st[max], &st[i]);
 	}
 	display(st, no);
 }
@@ -132,7 +129,6 @@ int binarySearch(Stu st[], char arr[], int no){			// DONE
 				    return middle;
 			        break;
 			case 1: right = right -1;
-
 		}
 	}
 	printf("Element not Found");
@@ -141,9 +137,10 @@ int binarySearch(Stu st[], char arr[], int no){			// DONE
 }
 
 void swap(Stu *s1, Stu *s2){
-    Stu *temp;
-    *temp = *s1;
+    Stu temp;
+    temp = *s1;
     *s1 = *s2;
-    *s2 = *temp;
+    *s2 = temp;
 }
+
 

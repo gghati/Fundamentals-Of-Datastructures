@@ -14,7 +14,6 @@ Implement Singly Linked List to create and display the book index.
 #include<stdio.h>
 #include <stdlib.h>
 
-
 typedef struct {
 	int data;
 	struct Node *next;

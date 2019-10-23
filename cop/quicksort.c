@@ -77,14 +77,14 @@ void acceptData(int t)			//Get Data
 		if(checkMob(t))
 			printf("\nEntered Mobile No. Already Exists..!!");
 	}while(checkMob(t)||(M[t].mno<1000000000)||(M[t].mno>9999999999));      //Validation of Mobile Number
-
+	
 	printf("Bill Amount : ");
     scanf("%f",&M[t].bill);
 }
 
 void displayData(int j)			//Displaying Data
 {
-	printf("\n %5d\t\t%s\t\t%lld\t%2f",j+1,M[j].name,M[j].mno,M[j].bill);
+	printf("\n %5d\t\t%s\t\t%lld\t%2f", j+1, M[j].name,M[j].mno,M[j].bill);
 }
 
 void swap(struct Mobile *M1,struct Mobile *M2)
@@ -131,7 +131,7 @@ int partitionR(int low, int high, int s[2])
 
 void QuickSortR(int low,int high,int c,int s[2])
 {
-	int i;
+	int i;1
 	if (low < high)
     {
         int p = partitionR(low, high, s);
