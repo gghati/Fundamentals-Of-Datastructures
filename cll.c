@@ -1,12 +1,16 @@
 /*
- ============================================================================
- Name        : CLL.c
- Author      : Murtuza Husain
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
+=======================================================================================
+Assignment : Operations on single variable polynomial using circular linked lists.
+Name : Gaurav Ghati
+class : SE 10
+Batch : F 10
+
+Problem Statement: Implement polynomial using CLL and perform
+	a) Addition of Polynomials
+	b) Multiplication of polynomials
+	c) Evaluation of polynomial.
+=======================================================================================
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -280,3 +284,135 @@ int main()
 		}
 	}while(ch!=7);
 }
+
+/*
+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+1
+
+Enter no of terms to insert
+2
+
+Enter power for node 1
+3
+
+Enter coefficient for node 1
+2
+
+Enter power for node 2
+2
+
+Enter coefficient for node 2
+3
+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+2
+
+Enter no of terms to insert
+3
+
+Enter power for node 1
+3
+
+Enter coefficient for node 1
+3
+
+Enter power for node 2
+2
+
+Enter coefficient for node 2
+2
+
+Enter power for node 3
+4
+
+Enter coefficient for node 3
+4
+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+3
+
+Polynomial 1:
+2x^3+3x^2+
+Polynomial 2:
+3x^3+2x^2+4x^4+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+4
+
+Addition of Polynomials is:
+
+5x^3+5x^2+4x^4+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+5
+
+Multiplication of Polynomials is:
+6x^6+9x^5+4x^5+6x^4+8x^7+12x^6+0x^0+
+
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+6
+
+Evavluation of Polynomial
+
+Polynomial1:
+
+Enter value of x
+1
+
+Polynomial2:
+
+Enter value of x
+5
+
+Polynomial 1=0.000000
+Polynomial 2=0.000000
+1.Insert Polynomial 1
+2.Insert Polynomial 2
+3.Display Polynomials
+4.Addition of Polynomials
+5.Multiplication
+6.Evaluation
+7.End
+7
+
+EXIT SUCCESSFULL
+
+
+*/
+
+

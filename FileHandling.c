@@ -1,3 +1,19 @@
+/*
+=====================================================================
+Assignment : FILE operations
+Name : Gaurav Ghati
+class : SE 10
+Batch : F 10
+
+Implement sequential file and perform following operations on any database:
+	i. Display
+	ii. Add records
+	iii. Search record
+	iv. Modify record
+	v. Delete record
+=====================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -281,3 +297,4 @@ int main()
 
     return 0;
 }
+

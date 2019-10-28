@@ -1,3 +1,15 @@
+/*
+============================================================================
+Assignment : Generalized linked list
+Name : Gaurav Ghati
+class : SE 10
+Batch : F 10
+
+Problem Statement:
+	Implement Generalized Linked List to create and display the book index.
+=============================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 4
@@ -61,8 +73,8 @@ Node* Create_GLL(Node* head, char str[])
 		i++;
 		if(str[i] == ')')
 			return head;
-	}//end of for
-} //end of method
+	} 
+} 
 
 void Display(Node* temp)
 {
@@ -106,6 +118,11 @@ int main()
 	Display(head);
 	printf("\nDo you want to try again (y/n): ");
 	scanf(" %c", &repeat);
-	}while(repeat == 'y');//end of do
+	}while(repeat == 'y');
 	return 0;
-}//end of main
+}
+/*
+
+NOT IMPLEMENTED CORRECTLY
+
+*/

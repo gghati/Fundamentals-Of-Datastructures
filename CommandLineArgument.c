@@ -1,8 +1,13 @@
 /*
- ============================================================================
- Name        : FileHandling.c
- Author      : Gaurav Ghati
- ============================================================================
+=====================================================================
+Assignment : File Handling by Command Line Arguments.
+Name : Gaurav Ghati
+class : SE 10
+Batch : F 10
+
+Problem Statement:
+	Write C program to implement TYPE and COPY commands of DOS using command line arguments.
+====================================================================
 */
 
 #include<stdio.h>
@@ -44,3 +49,5 @@ int main(int argc, char *argv[]){
    }
     return 0;
 }
+
+

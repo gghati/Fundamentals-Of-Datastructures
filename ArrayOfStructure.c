@@ -184,4 +184,138 @@ int add(struct Student students[50], int num){     // num = total number of stud
    return 0;
 }
 
+/*
+
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:1
+
+Enter the Name of Student:Gaurav
+
+Enter the City:Pune
+
+Enter the Mobile NUmber:9067453432
+
+Enter the Marks of students of previous year:12 23 34 
+Student Added!
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:1
+
+Enter the Name of Student:ellika  
+
+Enter the City:ajsddasc
+
+Enter the Mobile NUmber:9876543210
+
+Enter the Marks of students of previous year:34 45 56
+Student Added!
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:1
+
+Enter the Name of Student:sakshee
+
+Enter the City:pune
+
+Enter the Mobile NUmber:1234567890
+
+Enter the Marks of students of previous year:45 56 67
+Student Added!
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:4
+
+<--------------------------STUDENT DATABASE-------------------------------------->
+RollNo.		Name		City		Mob Number	Marks 1		Marks 2		Marks 3		Percentage
+------------------------------------------------------------------------------------------------------------------------------------------
+23201		Gaurav		Pune		9067453432		12		23		34		23
+23202		ellika		ajsddasc		9876543210		34		45		56		45
+23203		sakshee		pune		1234567890		45		56		67		56
+-----------------------------------------------------------------------------------------------------------------------------------------
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:3
+
+Enter Roll Number which you want to delete:23203
+
+Deleted Student!
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:4
+
+<-------------------------------------------------STUDENT DATABASE------------------------------------->
+RollNo.		Name		City		Mob Number	Marks 1		Marks 2		Marks 3		Percentage
+------------------------------------------------------------------------------------------------------------------------------------------
+23201		Gaurav		Pune		9067453432		12		23		34		23
+23202		ellika		ajsddasc		9876543210		34		45		56		45
+-------------------------------------------------------------------------- ---------------------------------------------------------------
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:4
+
+<----------------------------------------------------------STUDENT DATABASE------------------------------------------------------------>
+RollNo.		Name		City		Mob Number	Marks 1		Marks 2		Marks 3		Percentage
+------------------------------------------------------------------------------------------------------------------------------------------
+23201		Gaurav		Pune		9067453432		12		23		34		23
+23202		ellika		ajsddasc		9876543210		34		45		56		45
+-------------------------------------------------------------------------- ---------------------------------------------------------------
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+ENTER CHOICE:2
+
+Which Roll No you want to modify:23202
+what you wannna Update:
+1)Name
+2)City
+3)Mobile Number
+4)Marks1
+
+UPDATE the Name of Student:Sammer
+
+Updation Done!
+<-------DataBase Operations------->
+1) Add Student.
+2) Modify Details
+3) Delete Student
+4) Display Details
+5) Exit
+
+ENTER CHOICE:5
+
+
+*/
+
 

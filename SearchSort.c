@@ -298,3 +298,161 @@ int main()
 
 	return 0;
 }
+
+
+/*
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 1
+
+Enter no. of students : 4
+
+Student 1 :
+Unique Roll No. : 1234
+Name : Gaurav
+Age : 23
+Percentage : 23
+
+Student 2 :
+Unique Roll No. : 2345
+Name : Puneet
+Age : 34
+Percentage : 34
+
+Student 3 :
+Unique Roll No. : 3456
+Name : Ellika
+Age : 45
+Percentage : 45
+
+Student 4 :
+Unique Roll No. : 4567
+Name : Sakshee
+Age : 56
+Percentage : 56
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 2
+
+BUBBLE SORT : (Sort by Roll No. in Ascending Order)
+
+Process :-
+
+Original : 1234   2345   3456   4567   
+
+Hence List is Sorted in 0 passes.
+Total Swaps = 0.
+Total Comparisons = 3.
+
+DATA BASE :
+-------------------------------------------------------------------------------------
+
+Unique Roll No.		Name of Student		Age	Percentage
+
+-------------------------------------------------------------------------------------
+
+  1234			Gaurav			13106	23.000000
+  2345			Puneet			13363	34.000000
+  3456			Ellika			13620	45.000000
+  4567			Sakshee			13877	56.000000
+-------------------------------------------------------------------------------------
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 3
+
+Process :-
+
+Original : GauravPuneetEllikaSakshee
+Pass 1   : Sakshee   Puneet   Ellika   Gaurav    | Swaps = 0  | Comparisons = 3
+Pass 2   : Sakshee   Puneet   Ellika   Gaurav    | Swaps = 0  | Comparisons = 2
+Pass 3   : Sakshee   Puneet   Gaurav   Ellika    | Swaps = 0  | Comparisons = 1
+
+Hence List is Sorted in 3 passes.
+Total Swaps = 0.
+Total Comparisons = 6.
+
+SELECTION SORT : (Sort by Name in Descending Order)
+
+DATA BASE :
+-------------------------------------------------------------------------------------
+
+Unique Roll No.		Name of Student		Age	Percentage
+
+-------------------------------------------------------------------------------------
+
+  4567			Sakshee			13877	56.000000
+  2345			Puneet			13363	34.000000
+  1234			Gaurav			13106	23.000000
+  3456			Ellika			13620	45.000000
+-------------------------------------------------------------------------------------
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 5
+
+BINARY SEARCH : (Search Record by Roll No.)
+
+Enter Roll No. to Search : 2345
+1-------------------------------------------------------------------------------------
+
+Unique Roll No.		Name of Student		Age	Percentage
+
+-------------------------------------------------------------------------------------
+
+  2345			Puneet			13363	34.000000
+-------------------------------------------------------------------------------------
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 4
+
+BINARY SEARCH : (Search Record by Roll No.)
+
+Enter Roll No. to Search : 2345
+-------------------------------------------------------------------------------------
+
+Unique Roll No.		Name of Student		Age	Percentage
+
+-------------------------------------------------------------------------------------
+
+  2345			Puneet			13363	34.000000
+-------------------------------------------------------------------------------------
+
+Menu :
+1. Enter Students Records.
+2. Display in ascending order of Roll. No.
+3. Display in descending order of Name.
+4. Search Data ( Without Recursion ).
+5. Search Data ( With Recursion ).
+6. Exit.
+Enter your choice : 6
+
+*/

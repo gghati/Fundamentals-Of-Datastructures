@@ -201,3 +201,54 @@ void reverse(char a[]){
   } 
   printf("\n\n");
 }
+
+
+/*
+OUTPUT: 
+
+Enter String:gauravghati
+Enter second String: ghati
+The Copied String is: gauravghatighati
+
+ENTER CHOICE (7 for Display Menu) :
+3
+Enter String:gaurav
+The Reversed String is: varuag
+
+ENTER CHOICE (7 for Display Menu) :
+4
+Enter String:gaurav
+The String is not Palindrom!
+
+ENTER CHOICE (7 for Display Menu) :
+4
+Enter String:nayan
+The String is palindrom!
+
+ENTER CHOICE (7 for Display Menu) :
+5
+Enter String:gaurav
+Enter substring String:au
+1 substring B of A is from 1 to 2 position.
+The String B is substring of A and it occur 1 times
+
+ENTER CHOICE (7 for Display Menu) :
+6
+Enter String:gaurav
+Enter second String:ghati
+The two strings are not similar.
+ENTER CHOICE (7 for Display Menu) :
+7
+<<-----------Menu------------->>
+1. Length
+2. Copy String in another String
+3. Reverse String
+4. Check for Palindrom
+5. Check for substring
+6. compare Any String with another
+7. Display menu
+8. Exit
+ENTER CHOICE (7 for Display Menu) :
+8
+
+*/

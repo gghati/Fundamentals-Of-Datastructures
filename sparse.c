@@ -1,6 +1,6 @@
 /*
 =====================================================================
-Assignment : SPARE MATRIX
+Assignment : SPARES MATRIX
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
@@ -281,3 +281,207 @@ int main()
 
     return 0;
 }
+
+/*
+
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 1
+
+Sparse Matrix 1:
+Enter no. of rows : 3
+Enter no. of columns : 3
+Enter elements one by one.
+1 2 3 4 5 6 7 8 9
+
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 2
+
+SHOW MATRIX:
+Entered Sparse Matrix is :-
+
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	2
+	0	2	3
+	1	0	4
+	1	1	5
+	1	2	6
+	2	0	7
+	2	1	8
+	2	2	9
+
+In Matrix Form :
+	 1   2   3  
+	 4   5   6  
+	 7   8   9  
+	
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 3
+
+Enter another Matrix to ADD :
+Sparse Matrix 2:
+Enter no. of rows : 3 
+Enter no. of columns : 3
+Enter elements one by one.
+9 8 7 6 5 4 3 2 1  
+
+ADDITION:
+
+Sparse Matrix 1:
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	2
+	0	2	3
+	1	0	4
+	1	1	5
+	1	2	6
+	2	0	7
+	2	1	8
+	2	2	9
+
+Sparse Matrix 2:
+	Row	Col	Value
+	3	3	9
+	0	0	9
+	0	1	8
+	0	2	7
+	1	0	6
+	1	1	5
+	1	2	4
+	2	0	3
+	2	1	2
+	2	2	1
+
+Sum :
+	Row	Col	Value
+	3	3	9
+	0	0	10
+	0	1	10
+	0	2	10
+	1	0	10
+	1	1	10
+	1	2	10
+	2	0	10
+	2	1	10
+	2	2	10
+
+Sparse Matrix 1:
+	 1   2   3  
+	 4   5   6  
+	 7   8   9  
+	
+Sparse Matrix 2:
+	 9   8   7  
+	 6   5   4  
+	 3   2   1  
+	
+Sum :
+	 10   10   10  
+	 10   10   10  
+	 10   10   10  
+	
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 4
+
+SIMPLE TRANSPOSE:
+
+Sparse Matrix 1:
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	2
+	0	2	3
+	1	0	4
+	1	1	5
+	1	2	6
+	2	0	7
+	2	1	8
+	2	2	9
+
+Transpose of Sparse Matrix 1 :
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	4
+	0	2	7
+	1	0	2
+	1	1	5
+	1	2	8
+	2	0	3
+	2	1	6
+	2	2	9
+
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 5
+
+FAST TRANSPOSE:
+
+Sparse Matrix 1:
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	2
+	0	2	3
+	1	0	4
+	1	1	5
+	1	2	6
+	2	0	7
+	2	1	8
+	2	2	9
+
+Transpose of Sparse Matrix 1 :
+	Row	Col	Value
+	3	3	9
+	0	0	1
+	0	1	4
+	0	2	7
+	1	0	2
+	1	1	5
+	1	2	8
+	2	0	3
+	2	1	6
+	2	2	9
+
+ Menu :
+1. Input Matrix.
+2. Display Matrix.
+3. Add Matrices.
+4. Simple Transpose.
+5. Fast Transpose.
+6. Exit.
+Enter your choice : 6
+
+
+*/

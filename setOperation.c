@@ -151,3 +151,83 @@ void symmdiff(int set1[],int set2[],int set3[]){
       if(!member(set1,set2[i]))
         set3[++set3[0]]=set2[i];  // insert and increment no. of elements
 }
+
+
+/*
+
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:1
+
+Creting First Set...
+ No. of elements in the set:5
+
+ enter set elements :1 2 3 4 5
+
+Creating Second Set...
+ No. of elements in the set:6
+
+ enter set elements :3 4 5 6 7 8
+
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:3
+Union is :
+ Members of the set :  1  2  3  4  5  6  7  8  
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:4
+Intersection is :
+ Members of the set :  3  4  5  
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:5
+Difference is :
+ Members of the set :  1  2  
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:6
+Symmetric Difference is :
+ Members of the set :  1  2  6  7  8  
+1. Create
+2. Print
+3. Union
+4. Intersection
+5. Difference
+6. Symmetrec Difference 
+7. Quit
+
+Enter Your Choice:7
+
+
+*/

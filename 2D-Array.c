@@ -1,6 +1,6 @@
 /*
 =====================================================================
-Assignment : Matrix Operations
+Assignment : Matrix Operations (2D - Array)
 Name : Gaurav Ghati
 class : SE 10
 Batch : F 10
@@ -225,3 +225,92 @@ void mul(int a[10][10], int b[10][10], int r1, int c1, int r2, int c2){
        printMatrix(c, r1, c2);
   }
 }
+
+/*
+
+Enter number of rows and columns for 1st matrix :3
+3
+Enter Elements of 1st matrix : 1 2 3
+                               4 5 6
+                               7 8 9
+Enter number of rows and columns for 2nd matrix :3 3
+Enter Elements of 2nd matrix : 9 8 7
+                               6 5 4 
+                               3 2 1 
+                               
+<<-----------Menu------------->>
+1. Addition of A and B
+2. Subtraction of A and B
+3. Transpose of A
+4. saddel points of A
+5. Transpose of B
+6. saddel points of B
+7. Multiplication of A and B
+8. Display menu
+9. Exit
+
+ENTER CHOICE (8 For Display Menu) : 1
+
+Addition of A and B
+10 10 10 
+10 10 10 
+10 10 10 
+
+ENTER CHOICE (8 For Display Menu) : 2
+
+Subtraction of A and B :
+-8 -6 -4 
+-2 0 2 
+4 6 8 
+
+ENTER CHOICE (8 For Display Menu) : 3
+
+Transpose of A is :
+ 1 4 7
+ 2 5 8
+ 3 6 9
+
+ENTER CHOICE (8 For Display Menu) : 4
+
+For  A :
+Saddle point is at (0, 2) and is 3
+Saddle point is at (2, 0) and is 7
+
+ENTER CHOICE (8 For Display Menu) : 5
+
+Transpose of B is :
+ 9 6 3
+ 8 5 2
+ 7 4 1
+
+ENTER CHOICE (8 For Display Menu) : 6
+
+For B  :
+Saddle point is at (0, 2) and is 7
+Saddle point is at (2, 0) and is 3
+
+ENTER CHOICE (8 For Display Menu) : 7
+
+Multiplication of A and B
+30 24 18 
+84 69 54 
+138 114 90 
+
+ENTER CHOICE (8 For Display Menu) : 8
+
+<<-----------Menu------------->>
+1. Addition of A and B
+2. Subtraction of A and B
+3. Transpose of A
+4. saddel points of A
+5. Transpose of B
+6. saddel points of B
+7. Multiplication of A and B
+8. Display menu
+9. Exit
+
+ENTER CHOICE (8 For Display Menu) : 9
+
+*/
+
+

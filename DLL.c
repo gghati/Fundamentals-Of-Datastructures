@@ -138,4 +138,32 @@ int main(){
 	return 0;
 }
 
+/*
 
+Enter the Number of element in the list :5
+Enter the value: 1
+
+Enter the value: 2
+
+Enter the value: 3
+
+Enter the value: 4
+
+Enter the value: 5
+(1) <-> (2) <-> (3) <-> (4) <-> (5) <-> 
+
+Printing backward : 
+(5) <-> (4) <-> (3) <-> (2) <-> (1) <-> 
+
+Enter the position you want to enter: 2
+
+Enter the value: 100
+(1) <-> (100) <-> (2) <-> (3) <-> (4) <-> (5) <-> 
+Enter the Position which you want to delete : 2
+(1) <-> (2) <-> (3) <-> (4) <-> (5) <-> 
+
+Printing backward : 
+(5) <-> (4) <-> (3) <-> (2) <-> (1) <-> 
+
+
+*/

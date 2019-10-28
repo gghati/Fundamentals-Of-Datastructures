@@ -109,4 +109,40 @@ int main(){
 	return 0;
 }
 
+/*
 
+Enter no. of records : 4
+
+Customer 1 :
+Name : Gaurav
+Mobile No. : 9876543210
+Bill Amount : 3241
+
+Customer 2 :
+Name : Puneet
+Mobile No. : 8765432109
+Bill Amount : 4567 
+
+Customer 3 :
+Name : Ellika
+Mobile No. : 2345678901
+Bill Amount : 7234
+
+Customer 4 :
+Name : Sakshee
+Mobile No. : 7654321098
+Bill Amount : 3431
+
+     1		Gaurav		9876543210	3241.000000
+     2		Puneet		8765432109	4567.000000
+     3		Ellika		2345678901	7234.000000
+     4		Sakshee		7654321098	3431.000000
+
+After Quicksort: 
+
+     1		Ellika		2345678901	7234.000000
+     2		Sakshee		7654321098	3431.000000
+     3		Puneet		8765432109	4567.000000
+     4		Gaurav		9876543210	3241.000000
+
+*/
