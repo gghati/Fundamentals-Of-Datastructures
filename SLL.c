@@ -54,7 +54,6 @@ void display(Node* p){
 
 Node* insert(Node* head){
 	int val, t;
-	printf("Enter 0 if want to enter at the end else enter position..");
 	printf("\nEnter the position you want to enter: ");
 	scanf("%d", &t);
 	printf("\nEnter the value: ");
@@ -135,6 +134,7 @@ int main(){
 	p = delete(p);
 	display(p);
 	reverse(p);
+	printf("\nPrinting Reverted Linked List: \n");
 	p = reverseLL(p);
 	display(p);
 	return 0;

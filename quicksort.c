@@ -60,8 +60,7 @@ void quicksort(int l, int r){
 	}
 }
 
-void acceptData(int t)			//Get Data
-{
+void acceptData(int t){			//Get Data
     printf("\nCustomer %d :",t+1);
     printf("\n");
 
@@ -102,6 +101,8 @@ int main(){
 		displayData(i);
 		
 	quicksort(0,t-1);
+	
+	printf("\n\nAfter Quicksort: \n");
 	
 	for(i=0;i<t;i++)
 		displayData(i);

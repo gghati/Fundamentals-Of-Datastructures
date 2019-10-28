@@ -63,6 +63,7 @@ void addMat(spMat m1[l],spMat m2[l],spMat m[l])
 			m[k].row = m1[i].row;
 			m[k].col = m1[i].col;
 			m[k].val = m1[i].val + m2[j].val;
+			
 			i++;
 			j++;
 			k++;
