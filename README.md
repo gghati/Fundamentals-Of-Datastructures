@@ -1,4 +1,4 @@
-# Programming-Laboratory
+# Fundamentals Of Data Structures
 
 # Concept Covered:
   		- 1D Array
@@ -10,12 +10,17 @@
   		- File Handling
   		- Bubble Sort
   		- Selection Sort
+  		- Quick sort
   		- Binary Search (with and without Reccursion)
   		- Sparse Matrix
   		- Singly Linked List
   		- Doubly Linked List
   		- Circular Linked List
   		- Generalized Linked List
+  		
+  	As a Extra Assignments :
+  		- Function Pointers
+  		- Double Pointer (Array of Char Array(string))
 
 # 1) 1-D Array (Set Operations)
 	
@@ -49,10 +54,10 @@
 			e) Modify a record.
 			f) Delete a record.
 			
-# 5) Command Line Arguments (FILE operations)
+# 5) - Command Line Arguments (FILE operations)
 	i) Write C program to implement TYPE and COPY commands of DOS using command line arguments.
 	
-# FILE HANDLING (FILE operations)
+#    - FILE HANDLING
 	ii) Implement sequential file and perform following operations on any database:
 			i. Display
 			ii. Add records
