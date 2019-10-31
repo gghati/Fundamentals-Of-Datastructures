@@ -19,8 +19,10 @@
   		- Generalized Linked List
   		
   	As a Extra Assignments :
-  		- Function Pointers
-  		- Double Pointer (Array of Char Array(string))
+	  	1)	- Function Pointers
+  			- Double Pointer (Array of Char Array(string))
+  		2)  - Multiple Pointer
+  		    - Dynamic Memory Allocation	
 
 # 1) 1-D Array (Set Operations)
 	
