@@ -24,7 +24,7 @@
   		2)  - Multiple Pointer
   		    - Dynamic Memory Allocation	
 
-# 1) 1-D Array 
+# 1) 1-D ARRAY 
 	TITLE: Set Operations
 		Perform following set operations using arrays
 			   a) Union
@@ -32,7 +32,7 @@
 			   c) Difference
 			   d) Symmetric Difference
 
-# 2) 2-D Array 
+# 2) 2-D ARRAY 
 	TITLE: MATRIX OPERATIONS
 		Problem Statement: Represent matrix using two dimensional arrays and perform 
 		following operations with and without pointer.
@@ -41,7 +41,7 @@
 				c) Transpose
 				d) Saddle point
 
-# 3) String Operations 
+# 3) STRING OPERATIONS 
 	TITLE: With and Without Pointers
 		Perform following String operations with and without pointers to arrays 
 		(without using the library functions):
@@ -51,8 +51,8 @@
 				d) copy
 				e) Reverse.
 			
-# 4) Array of Structure 
-	TITLE: DATABASE Operations
+# 4) ARRAY OF STRUCTURE
+	TITLE: Database Operations
 		Create a Database using array of structures and perform following 
 		operations on it:
 				a) Create Database
@@ -62,7 +62,7 @@
 				e) Modify a record.
 				f) Delete a record.
 			
-# 5) - Command Line Arguments 
+# 5) COMMAND LINE ARGUMENTS 
 	TITLE: FILE operations
 		i) Write C program to implement TYPE and COPY commands of DOS using 
 		   command line arguments.
@@ -76,7 +76,7 @@
 				v. Delete record
 
 
-# 6) Sorting & Searching 
+# 6) SORTING AND SEARCHING
 	TITLE: Student operations
 		Accept student information (e.g. RollNo, Name, Percentage etc.).
 				a) Display the data in ascending order of name (Bubble Sort)
@@ -86,7 +86,7 @@
 				   test cases (Worst, Average, Best case).
 
 
-# 7) Quick Sort 
+# 7) QUICK SORT
 	TITLE: Mobile Database Operations
 		Accept Mobile user information (e.g. MobileNo, Name, BillAmount etc.).
 				a) Display the data in descending order of Name (Quicksort, recursive)
@@ -96,14 +96,14 @@
 				d) Display the number of passes and comparisons for different 
 				   test cases (Worst, Average, Best case).
 
-# 8) Sparse Matrix 
+# 8) SPARSE MATRIX
 	TITLE: Sparse Matrix Concept
 		Implement Sparse matrix and perform following operations on it:
 				a) Addition
 				b) Simple Transpose
 				c) Fast Transpose
 
-# 9) Singly linked list
+# 9) SINGLY LINKED LIST	
 	Create a singly linked list with options:
 			a) Insert (at front, at end, in the middle),
 			b) Delete (at front, at end, in the middle),
@@ -111,14 +111,14 @@
 			d) Display Reverse,
 			e) Revert the SLL
 
-# 10) circular linked lists 
+# 10) CIRCULAR LINKED LIST
 	TITLE: Polynomial Expressions)
 		Implement polynomial using CLL and perform
 				a) Addition of Polynomials
 				b) Multiplication of polynomials
 				c) Evaluation of polynomial.
 
-# 11) Doubly linked lists
+# 11) DOUBLY LINKED LIST
 	Create a Doubly linked list with options:
 			d) Insert
 			e) Delete,
@@ -126,6 +126,6 @@
 			g) Display backward .
 
 
-# 12) Generalized linked list
+# 12) GENERALIZED LINKED LIST
 	Implement Generalized Linked List to create and display the book index.
 
