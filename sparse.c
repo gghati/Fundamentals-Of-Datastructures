@@ -145,9 +145,9 @@ void fasttrans(spMat a[l], spMat b[l])
 			row_terms[i] = 0;
 		for(i=1; i<=num_terms; i++)
 			row_terms[a[i].col]++;
-        start_pos[0] = 1;
-        for(i=1; i<num_cols; i++)
-            start_pos[i] = start_pos[i-1] + row_terms[i-1];
+                start_pos[0] = 1;
+                for(i=1; i<num_cols; i++)
+                        start_pos[i] = start_pos[i-1] + row_terms[i-1];
 		for(i=1; i<=num_terms; i++)
 		{
 			j = start_pos[a[i].col]++;
